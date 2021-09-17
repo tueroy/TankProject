@@ -1,0 +1,44 @@
+public class MainTank extends JFrame implements KeyListener {
+    JLabel maintank;
+private Map map;
+    public MainTank() {
+
+        maintank = new JLabel();
+        maintank.setBounds(50,50,50,50);
+        maintank.setBackground(Color.RED);
+        maintank.setOpaque(true);
+        maintank.setVisible(true);
+    }
+      @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+       switch (e.getKeyCode()) {
+            case 37:
+                maintank.setLocation(maintank.getX() - 10,maintank.getY());
+                break;
+            case 38:
+                maintank.setLocation(maintank.getX(), maintank.getY() - 10);
+                break;
+            case 39:
+                maintank.setLocation(maintank.getX() + 10, maintank.getY());
+                break;
+           case 40:
+               maintank.setLocation(maintank.getX(), maintank.getY() + 10);
+                break;
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
+
+}
